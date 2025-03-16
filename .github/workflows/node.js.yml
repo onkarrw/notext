@@ -27,7 +27,7 @@ jobs:
       run: npm ci
 
     - name: Install dotenv (if not in dependencies)
-      run: npm install dotenv
+      run: npm install dotenv express cors path mongoose
 
     - name: Build project
       run: npm run build --if-present
