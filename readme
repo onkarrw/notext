@@ -1,0 +1,23 @@
+# Node.js Application
+
+This is a Node.js application that allows users to save text and images, with support for private entries and a passcode-protected private section.
+
+---
+
+## **Features**
+- Save text entries with a heading and description.
+- Upload images.
+- Search entries by text or date.
+- Private section protected by a passcode.
+- Responsive and modern UI.
+
+---
+
+## **Prerequisites**
+Before running the application, ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
+- [Docker](https://www.docker.com/) (optional, for containerization)
+- [MongoDB](https://www.mongodb.com/) (or a MongoDB connection string)
+
+---
