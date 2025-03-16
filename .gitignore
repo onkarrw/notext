@@ -19,8 +19,6 @@ Thumbs.db
 dist/
 build/
 
-# Ignore package-lock.json (optional, depending on your workflow)
-package-lock.json
 
 # Ignore local development files
 *.local
