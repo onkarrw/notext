@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text & Image Saver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text & Image Saver</h1>
+        <nav>
+            <button onclick="openModal('textModal')">Add Text</button>
+            <button onclick="openModal('imageModal')">Add Image</button>
+            <button id="privateButton" onclick="openPrivateSection()">Private Section</button>
+            <button id="exitPrivateButton" style="display: none;" onclick="exitPrivateSection()">Exit Private</button>
+        </nav>
+
+        <!-- Search Bar -->
+        <input type="text" id="searchAll" placeholder="Search entries..." oninput="searchAllEntries()">
+
+        <!-- Display All Entries -->
+        <div id="allResults"></div>
+    </div>
+
+    <!-- Text Modal -->
+    <div id="textModal" class="modal">
+        <div class="modal-content">
+            <h2>Add Text</h2>
+            <input type="text" id="heading" placeholder="Heading" required>
+            <textarea id="description" placeholder="Description" required></textarea>
+            <button onclick="saveText()">Save</button>
+            <button class="close-modal" onclick="closeModal('textModal')">Close</button>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <h2>Add Image</h2>
+            <input type="file" id="imageInput" accept="image/*">
+            <button onclick="uploadImage()">Upload</button>
+            <button class="close-modal" onclick="closeModal('imageModal')">Close</button>
+        </div>
+    </div>
+
+    <!-- Private Section Modal -->
+    <div id="privateModal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Private Section</h2>
+            <input type="number" id="passcode" placeholder="Enter Passcode" required>
+            <button onclick="enterPrivateSection()">Enter</button>
+            <button class="close-modal" onclick="closeModal('privateModal')">Close</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
