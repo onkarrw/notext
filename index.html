@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text & Image Saver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Save Text or Images</h1>
+        <nav>
+            <button onclick="showPage('textForm')">Add Text</button>
+            <button onclick="showPage('imageForm')">Add Image</button>
+            <button onclick="showPage('search')">Search</button>
+        </nav>
+
+        <div id="textForm" class="page">
+            <h2>Add Text</h2>
+            <input type="text" id="heading" placeholder="Heading" required>
+            <textarea id="description" placeholder="Description" required></textarea>
+            <button onclick="saveText()">Save</button>
+        </div>
+
+        <div id="imageForm" class="page" style="display:none;">
+            <h2>Add Image</h2>
+            <input type="file" id="imageInput" accept="image/*">
+            <button onclick="uploadImage()">Upload</button>
+        </div>
+
+        <div id="search" class="page" style="display:none;">
+            <h2>Search</h2>
+            <input type="text" id="searchText" placeholder="Search by text">
+            <input type="date" id="searchDate">
+            <button onclick="searchEntries()">Search</button>
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
